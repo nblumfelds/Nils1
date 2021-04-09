@@ -27,19 +27,19 @@
         $resultsCheck = mysqli_num_rows($results);
 
         echo "<table>";
-        echo "<tr><th>Person ID</th><th>Name</th><th>Surname</th><th>Age</th></tr>";
+        echo "<tr><th>Person ID</th><th>Name</th><th>Surname</th><th>Age</th><th>Edit</th></tr>";
 
         if ($resultsCheck > 0) {
             while ($row = mysqli_fetch_assoc($results)) {
-                echo "<tr><td>";
-                echo $row ['person.id'];
-                echo "</td><td>";
-                echo $row['firstname'];
-                echo "</td><td>";
-                echo $row['lastname'];
-                echo "</td><td>";
-                echo $row['age'];
-                echo "</td></tr>";
+                echo "
+                    <tr>
+                        <td>".$row['personID']."</td>
+                        <td>".$row['firstname']."</td>
+                        <td>".$row['lastname']."</td>
+                        <td>".$row['age']."</td>
+                        <td><a href=delete.php?id=".$row['personID'].">Delete</a></td>
+                    </tr>
+                ";
             }
         }
 
