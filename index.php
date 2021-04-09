@@ -64,5 +64,18 @@
     <br>
 </form>
 
+<br>
+<br>
+        <p>Delete data from database</p>
+
+<form action="unsubmit.php" method="POST">
+    <input type="text" name="-first" placeholder="Firstname">
+    <br>
+    <input type="text" name="-last" placeholder="Lastname">
+    <br>
+    <button type="submit" name="submit">Submit</button>
+    <br>
+</form>
+
 </body>
 </html>
