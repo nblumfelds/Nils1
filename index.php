@@ -49,5 +49,20 @@
         
     ?>
 
+<br>
+<br>
+        <p>Inserting data into a database</p>
+
+<form action="submit.php" method="POST">
+    <input type="text" name="first" placeholder="Firstname">
+    <br>
+    <input type="text" name="last" placeholder="Lastname">
+    <br>
+    <input type="text" name="age" placeholder="Age">
+    <br>
+    <button type="submit" name="submit">Submit</button>
+    <br>
+</form>
+
 </body>
 </html>
