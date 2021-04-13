@@ -9,6 +9,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People</title>
+    <link rel="stylesheet" href="add-pep.css">
 </head>
 <body>
     <h1>Test</h1>
@@ -18,8 +19,31 @@
         print "Obtaining data from a server";
         echo "<br>";
     ?>
-   
     <br>
+
+
+    <button id="modalBtn" class="button">Add a person</button>
+
+    <div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <form action="add-pep.php" method="POST">
+                <input type="text" name="first+" placeholder="Firstname">
+                <br>
+                <input type="text" name="last+" placeholder="Lastname">
+                <br>
+                <input type="text" name="age+" placeholder="Age">
+                <br>
+                <button type="submit" name="add-pep">Submit</button>
+                <br>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
 
     <?php
         $sql = "SELECT * FROM people;";
@@ -53,7 +77,7 @@
 <br>
         <p>Inserting data into a database</p>
 
-<form action="submit.php" method="POST">
+<form action="add-pep.php" method="POST">
     <input type="text" name="first" placeholder="Firstname">
     <br>
     <input type="text" name="last" placeholder="Lastname">
@@ -77,5 +101,7 @@
     <br>
 </form>
 
+
+<script src="add-pep.js"></script>
 </body>
 </html>

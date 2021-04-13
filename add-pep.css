@@ -1,0 +1,52 @@
+body{
+    font-family : Cambria, Cochin;
+    line-height: 1.6;
+    padding: 0 10%;
+}
+
+.button{
+    background: rgba(0, 255, 55, 0.651);
+    border-radius: 6px;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.modal-content{
+    background-color: whitesmoke;
+    margin: 10% auto;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2);
+    animation: modalopen 1s
+}
+
+.closeBtn{
+    color: rgb(136, 136, 136);
+    float: right;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.closeBtn:hover,.closeBtn:focus{
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from{ opacity: 0}
+    to {opacity: 1}
+}
+
+.personID{
+    color: red;
+}
