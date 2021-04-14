@@ -77,7 +77,7 @@
 <br>
         <p>Inserting data into a database</p>
 
-<form action="add-pep.php" method="POST">
+<form action="submit.php" method="POST">
     <input type="text" name="first" placeholder="Firstname">
     <br>
     <input type="text" name="last" placeholder="Lastname">
@@ -96,6 +96,8 @@
     <input type="text" name="-first" placeholder="Firstname">
     <br>
     <input type="text" name="-last" placeholder="Lastname">
+    <br>
+    <input type="text" name="-ID" placeholder="ID">
     <br>
     <button type="submit" name="submit">Submit</button>
     <br>
