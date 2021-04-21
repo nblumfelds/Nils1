@@ -12,11 +12,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
     <h1>Interacting with a Database</h1>
 
     <p>This is data from a server</p>
 
     <button id="aModalBtn" class="aButton">Add a person</button>
+
 
 
     <!--Table-->
@@ -38,18 +40,20 @@
                         <td>".$row['age']."</td>
                         <td><a href=delete.php?id=".$row['personID']." style='text-decoration: none;background-color: red;border-radius: 4px; color:white;''>Delete</a></td>
                         <td><button type='button' name='eModalBtn'  class='eModalBtn' id='eModalBtn' onclick='editfunction(".$row['personID'].")'>Update</button></td>
-                    </tr>
+                        
+                     </tr>
                 ";
             }
         }
 
         echo "</table>";
         
+
+
         /*onclick='editfunction(".$row['personID'].")'
         var modal = document.getElementById('aModal');
         mysqli_query($conn, $sql);
         header("Location: index.php?edit=success");
-
         console.log(hi)
         */
         
@@ -97,5 +101,6 @@
 
 
 <script src="main.js"></script>
+<script src="edit.js"></script>
 </body>
 </html>
