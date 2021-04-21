@@ -20,3 +20,5 @@ function clickOutside(e){
     if(e.target == modal)
     modal.style.display = 'none';
   }
+
+console.log('pirmais');

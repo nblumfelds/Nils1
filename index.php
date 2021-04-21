@@ -10,38 +10,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>People</title>
     <link rel="stylesheet" href="add-pep.css">
+    
 </head>
 <body>
     <h1>Test</h1>
     <br>
-
-    <?php
-        print "Obtaining data from a server";
-        echo "<br>";
-    ?>
+    <p>Obtaining data from a server</p>
+    
     <br>
 
 
     <button id="modalBtn" class="button">Add a person</button>
-
-    <div id="simpleModal" class="modal">
-        <div class="modal-content">
-            <span class="closeBtn">&times;</span>
-            <form action="add-pep.php" method="POST">
-                <input type="text" name="first+" placeholder="Firstname">
-                <br>
-                <input type="text" name="last+" placeholder="Lastname">
-                <br>
-                <input type="text" name="age+" placeholder="Age">
-                <br>
-                <button type="submit" name="add-pep">Submit</button>
-                <br>
-            </form>
-        </div>
-    </div>
-
-
-
 
 
 
@@ -61,20 +40,23 @@
                         <td>".$row['firstname']."</td>
                         <td>".$row['lastname']."</td>
                         <td>".$row['age']."</td>
-                        <td><a href=delete.php?id=".$row['personID'].">Delete</a></td>
+                        <td><a href=delete.php?id=".$row['personID']." >Delete</a></td>
+                        <td><button type='button' name='uupdate'  class='ubutton' id='uupdate'>Update</button></td>
                     </tr>
                 ";
             }
         }
 
         echo "</table>";
-        
-
+        /*onclick='updatefunction(".$row['personID'].")*/
         
     ?>
 
+
+
 <br>
 <br>
+<!--
         <p>Inserting data into a database</p>
 
 <form action="submit.php" method="POST">
@@ -102,8 +84,48 @@
     <button type="submit" name="submit">Submit</button>
     <br>
 </form>
+    -->
 
 
-<script src="add-pep.js"></script>
+<div id="simpleModal" class="modal">
+        <div class="modal-content">
+            <span class="closeBtn">&times;</span>
+            <form action="add-pep.php" method="POST">
+                <input type="text" name="first+" placeholder="Firstname">
+                <br>
+                <input type="text" name="last+" placeholder="Lastname">
+                <br>
+                <input type="text" name="age+" placeholder="Age">
+                <br>
+                <button type="submit" name="add-pep">Submit</button>
+                <br>
+            </form>
+        </div>
+</div>
+
+
+<div id="updateModal" class="modal2" >
+        <div class="modal-content">
+            <span class="ecloseBtn">&times;</span>
+            <form action="add-pep.php" method="POST">
+                <input type="text" name="ufirst" placeholder="First">
+                <br>
+                <input type="text" name="ulast" placeholder="Lastname">
+                <br>
+                <input type="text" name="uage" placeholder="Age">
+                <br>
+                <button type="submit" name="add-pep">Submit</button>
+                <br>
+            </form>
+        </div>
+</div>
+
+<button type='button' name='uupdate'  class='ubutton' id='uupdate'>Update</button>
+
+<p id="nils">This is a color</p>
+
+
+<!--<script src="add-pep.js"></script>-->
+<script src="edit.js"></script>
 </body>
 </html>

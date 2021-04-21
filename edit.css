@@ -2,6 +2,7 @@ body{
     font-family : Cambria, Cochin;
     line-height: 1.6;
     padding: 0 10%;
+
 }
 
 .button{
@@ -22,7 +23,7 @@ body{
 }
 
 .modal2{
-    display: none;
+    /*display: none;*/
     position: fixed;
     z-index: 1;
     left: 0;
@@ -63,11 +64,6 @@ body{
     color: red;
 }
 
-#uupdate{
-    color: red;
-    background-color: red;
-}
-
 #nils{
-    color: red;
+    color: pink;
 }

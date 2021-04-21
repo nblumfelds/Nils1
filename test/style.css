@@ -1,0 +1,96 @@
+body{
+    background-color: lightgray;
+    font-family: Cambria;
+    padding-top: 50px;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.aButton{
+    background: rgb(9, 241, 9);
+    border-radius: 6px;
+}
+.aButton:hover{
+    background: greenyellow;
+}
+
+.aModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+.eModal{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0, 0.5);
+    
+}
+
+.aModal-Content{
+    background-color: whitesmoke;
+    margin: 240px auto;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2);
+    border-radius: 5px;
+    animation: modalopen 1s
+}
+
+.eModal-Content{
+    background-color: whitesmoke;
+    margin: 240px auto;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0, 0.2);
+    border-radius: 5px;
+    animation: modalopen 1s
+}
+
+.aCloseBtn{
+    color: rgb(136, 136, 136);
+    float: right;
+    font-size: 35px;
+    margin-top: 0;
+}
+
+.eCloseBtn{
+    color: rgb(136, 136, 136);
+    float: right;
+    font-size: 35px;
+    margin-top: 0px;
+}
+
+.aCloseBtn:hover,.closeBtn:focus{
+    color: black;
+    cursor: pointer;
+}
+
+.eCloseBtn:hover,.closeBtn:focus{
+    color: black;
+    cursor: pointer;
+}
+
+@keyframes modalopen {
+    from{ opacity: 0}
+    to {opacity: 1}
+}
+
+#eModalBtn{
+    background-color: rgb(9, 241, 9);
+    border-radius: 5px;
+}
