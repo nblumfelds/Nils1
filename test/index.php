@@ -39,7 +39,7 @@
                         <td>".$row['lastname']."</td>
                         <td>".$row['age']."</td>
                         <td><a href=delete.php?id=".$row['personID']." style='text-decoration: none;background-color: red;border-radius: 4px; color:white;''>Delete</a></td>
-                        <td><button type='button' name='eModalBtn'  class='eModalBtn' id='eModalBtn' onclick='editfunction(".$row['personID'].")'>Update</button></td>
+                        <td><button type='button' name='eModalBtn'  class='eModalBtn' id='eModalBtn' onclick='editfunction(".$row['personID'].",\"".$row['firstname']."\",\"".$row['lastname']."\",\"".$row['age']."\")'>Update</button></td>
                         
                      </tr>
                 ";
@@ -86,11 +86,13 @@
             <span class="eCloseBtn">&times;</span>
             <h3>Edit</h3>
             <form action="Edit.php" method="POST">
-                <input type="text" name="eFirst" placeholder="Firstname">
+                <input id="eid" type="hidden" name="eid" placeholder="Firstname">
                 <br>
-                <input type="text" name="eLast" placeholder="Lastname">
+                <input id="eFirst" type="text" name="eFirst" placeholder="Firstname">
                 <br>
-                <input type="text" name="eAge" placeholder="Age">
+                <input id="eLast" type="text" name="eLast" placeholder="Lastname">
+                <br>
+                <input id="eAge" type="text" name="eAge" placeholder="Age">
                 <br>
                 <button type="submit" name="eSubmit">Submit</button>
                 <br>

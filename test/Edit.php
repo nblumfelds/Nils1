@@ -1,7 +1,7 @@
 <?php
     include_once'dbh-conn.php';
 
-    $ID = "<script> document.write(x) </script>";
+    $ID = $_POST['eid'];
     $first = $_POST['eFirst'];
     $last = $_POST['eLast'];
     $age = $_POST['eAge'];
